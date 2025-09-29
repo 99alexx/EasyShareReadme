@@ -94,12 +94,20 @@ I made a file checker function which checks so the file doesn't exceed 100MB, an
 A concern I had was to probably check the files for malware before uploading them to the RaspberryPi, although they will never be opened on the disk. The two most promenent solutions is to use either ClamAV, a open-source malwvare program or a cloud API checker. Neither is implemented yet.
 
 # Phase 4:
-# Phase 5:
-# Phase 6:
+In progress with timer based deletion...
 
-express-rate-limit
+Deletion on download was implemeneted by simply use unlinkSync() after the download response to the client and the file is deleted.
+
+# Phase 5:
+This phase was focused on the usability and mobile responsivness aspect of the website. From the Second draft I improved the UI with more soothing colors and icons, and eventually ended up with the fifth and final draft which i was happy with.
+
+After some user tests I noticed that there was a lack of usability. When the user clicked on the upload button I had not implemented a loading indicator which incited confusion. The copy to clipboard button was not responsive enough and the users did not fully know if the link was copied or not. So I fixed those issues by implementing a simple loading indicator and responsivness to the copy button. I implemented a error HTML file to respond if the download link is not valid, with a couple of reasons to why that might be. I also on the suggestion from a user, implemented the Fourth draft which is a quick and easy guide for the user on how to use the website by just following three simple steps. 
+
+# Phase 6:
+I used express-rate-limit to manage requests from clients and set a timeout if the requests are to many. I implemented error handling in the form component if the file type is prohibited, and error messaging if the file does not exist. 50+ MB files take some time to upload, and I've not yet established how to make it faster, which for this project is not a priority. 
 
 # Phase 7:
+My focus on this step was to make it as secure as possible since I'm the one hosting the server. The plan was to use Nginx reverse proxy but after some research I found Cloudflare Tunnel which offered a very easy way to set up a secure connection and eliminating the need to port forward my home network. It's also well established for the  Raspberry Pi and with a integrated SSL Certificate, so I chose to start with using this. 
 
 # UI Iteration
 First draft
@@ -113,3 +121,6 @@ Third
 
 Fourth (After test on users, I've added a info startpage for better UX)
 ![fourth](imagesREADME/Fourth.png)
+
+Fifth draft (Final)
+![fifth](imagesREADME/fifth.png)
