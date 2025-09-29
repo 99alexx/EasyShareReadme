@@ -16,6 +16,7 @@ Tools/Frameworks etc:
 - NodeJS, Express, Multer
 - React/Vite, Tailwind, prettier
 - Cloudflare Tunnel
+- Python, CRON
 
 # The development plan (Implemented some improvements from Claude)
 
