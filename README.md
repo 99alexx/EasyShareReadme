@@ -13,8 +13,9 @@ Rules for usage:
   - Have general informative discussions without code examples.
 
 Tools/Frameworks etc:
-- NodeJS, Express, Multer, prettier
-- React/Vite, Tailwind
+- NodeJS, Express, Multer
+- React/Vite, Tailwind, prettier
+- Cloudflare Tunnel
 
 # The development plan (Implemented some improvements from Claude)
 
