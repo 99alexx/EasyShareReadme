@@ -95,7 +95,7 @@ I made a file checker function which checks so the file doesn't exceed 100MB, an
 A concern I had was to probably check the files for malware before uploading them to the RaspberryPi, although they will never be opened on the disk. The two most promenent solutions is to use either ClamAV, a open-source malwvare program or a cloud API checker. Neither is implemented yet.
 
 # Phase 4:
-In progress with timer based deletion...
+I created an easy Python script for the deletion of files when exeeded the 10 minute mark. I choose this approach because I wanted to keep it simple and reliable, and to keep this logic seperated from the server. I also added a CRON job so the script is running every minute.
 
 Deletion on download was implemeneted by simply use unlinkSync() after the download response to the client and the file is deleted.
 
