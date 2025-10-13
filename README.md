@@ -12,7 +12,7 @@ Rules for usage:
   - First try to search for solutions on eg. Stackoverflow.
   - Have general informative discussions without code examples.
 
-Tools/Frameworks etc:
+Tech stack
 - NodeJS, Express, Multer
 - React/Vite, Tailwind, prettier
 - Cloudflare Tunnel
